@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class NewMomentComponent {
   btnText = 'Compartilhar!';
 
+  createHandler(event: any) {
+
+  }
+
 }
