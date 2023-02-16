@@ -1,6 +1,8 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import {FormGroup, FormControl, Validators} from '@angular/forms';
+
+import { Moment } from 'src/app/Moment';
 
 @Component({
   selector: 'app-moment-form',
@@ -43,6 +45,8 @@ export class MomentFormComponent {
     }
 
     console.log(this.momentForm.value);
+
+    this.onSubmit.emit(this.momentForm.value);
   }
 
 }
