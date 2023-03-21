@@ -1,2 +1,15 @@
-<p>Página Home</p>
+<div class="home-container">
+    <h1>Veja o que estão compartilhando</h1>
+    <!-- form de busca -->
+    <div *ngIf="moments.length > 0; else noMoments">
+        <div class="moments-container">
+            <div class="moment" *ngFor="let moment of moments">
+                <h2>{{ moment.title }}</h2>
+            </div>
+        </div>
+    </div>
+    <ng-template #noMoments>
+        <h1>Não há momentos cadastrados!</h1>
+    </ng-template>
+</div>
 
